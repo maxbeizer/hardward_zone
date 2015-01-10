@@ -13,7 +13,8 @@ defmodule HardwardZone.Router do
   scope "/", HardwardZone do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", HardwardZone.HardwaresController, :index, as: :root
+    resources "/hardwares", HardwardZone.HardwaresController
   end
 
   # Other scopes may use custom stacks.
