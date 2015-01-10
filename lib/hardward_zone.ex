@@ -9,6 +9,7 @@ defmodule HardwardZone do
     children = [
       # Define workers and child supervisors to be supervised
       # worker(HardwardZone.Worker, [arg1, arg2, arg3])
+      worker(HardwardZone.Repo, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
